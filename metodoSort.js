@@ -11,6 +11,8 @@ ou em uma ordem específica, definida pelos argumentos de função.
 SINTAXE:
 
 array.sort()
+SENDO:
+Ordem lexicografica padrão.
 
 OU
 
@@ -29,6 +31,9 @@ A função localeCompare compara as strings e retorna um valor de acordo com a o
 Ao usar localeCompare, a ordem lexicográfica é determinada com base nas configurações regionais. 
 Isso é particularmente útil em aplicativos que são usados internacionalmente e 
 precisam suportar diferentes idiomas e culturas.
+
+Para ignorar o case sensitive, bastar por o { sensitivity: 'base' }  como terceiro argumento,
+por exemplo: a.localeCompare(b, { sensitivity: 'base' })
 */
 
 

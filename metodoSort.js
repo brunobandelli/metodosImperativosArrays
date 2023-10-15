@@ -75,7 +75,7 @@ Repare agora na diferença com uma função de comparação:
 
 const numbersComp = [10, 5, 8, 1, 7];
 numbersComp.sort((a,b)=>a-b);
-console.log(numbersComp); // Output: [1, 10, 5, 7, 8]
+console.log(numbersComp); // Output: [1, 5, 7, 8, 10]
 
 /*
 PARA REVERTER A ORDEM É SÓ MUDAR A ORDEM DE COMPARAÇÃO DOS PARAMETROS:

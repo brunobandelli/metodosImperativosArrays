@@ -32,8 +32,24 @@ Ao usar localeCompare, a ordem lexicográfica é determinada com base nas config
 Isso é particularmente útil em aplicativos que são usados internacionalmente e 
 precisam suportar diferentes idiomas e culturas.
 
-Para ignorar o case sensitive, bastar por o { sensitivity: 'base' }  como terceiro argumento,
-por exemplo: a.localeCompare(b, { sensitivity: 'base' })
+
+PERSONALISANDO:
+array.sort((a, b) => a.localeCompare(b, 'locale', { options: 'options' }));
+
+Tipos de Locale (Localidade):
+  'en-US' para inglês nos Estados Unidos.
+  'fr-FR' para francês na França.
+  'es-ES' para espanhol na Espanha.
+  'pt-BR' para português no Brasil.
+
+Tipos de Options (Opções):
+sensitivity:
+  'accent': Considera a diferença entre letras com ou sem acentos (por exemplo, 'é' e 'e').
+  'base': Considere letras maiúsculas e minúsculas como equivalentes, além de ignorar diferenças de acentuação.
+
+usage:
+  'sort': Usado para ordenação de strings.
+  'search': Usado para comparações em que a prioridade é encontrar uma correspondência (por exemplo, em pesquisas).
 */
 
 
@@ -87,7 +103,7 @@ console.log("-------------------------------------------------------------------
 
 //Exemplo 4: Com função de comparação de ordem lexicográfica determinada com base nas configurações regionais.
 
-const fruitsL = ['banana', 'cherry', 'apple', 'Date'];
+const fruitsL = ['banana', 'cherry', 'Apple', 'Date'];
 fruitsL.sort((a, b) => a.localeCompare(b));
 console.log(fruitsL); // Output:[ 'apple', 'banana', 'cherry', 'Date' ]
 
@@ -100,8 +116,13 @@ array.sort((a, b) => b.localeCompare(a))
 Usar localeCompare garante que a ordenação leve em conta considerações culturais e linguísticas. 
 Por exemplo, em algumas línguas, a ordem alfabética pode não ser a mesma que em inglês, 
 e certos caracteres podem ser tratados de forma especial na ordenação.
-*/
 
+/*
+Se retirarmos o .localeCompare(), e manter apenas .sort(),
+ficaria as strings com as letras maiusculas no inicio como prioridade.
+A ordenação ficaria assim:
+[ 'Apple', 'Date', 'banana', 'cherry' ]
+*/
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 console.log("-----------------------------------------------------------------------------------------------------Exemplo 4")
@@ -119,7 +140,7 @@ wordsS.sort((a, b) => a.localeCompare(b, { sensitivity: 'base' }));
 console.log(wordsS); // Output: ['Apple', 'banana', 'cherry', 'Date']
 
 /*Neste exemplo, a função de comparação personalizada usa localeCompare para ignorar 
-maiúsculas/minúsculas durante a ordenação. O terceiro argumento { sensitivity: 'base' } 
+maiúsculas/minúsculas e a acentuação durante a ordenação. O terceiro argumento { sensitivity: 'base' } 
 garante que a ordenação seja feita sem considerar a sensibilidade a maiúsculas/minúsculas.*/
 
 //OU

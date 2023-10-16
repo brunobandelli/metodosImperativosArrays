@@ -7,11 +7,11 @@ Tradução: "preencher"
 */
 
 /*
-array.fill(value[, start[, end]])
+array.fill(valor, indiceInicial, indiceFinal])
 
-value: O valor a ser usado para preencher o array.
-start (opcional): O índice inicial a partir do qual começar a preencher (padrão é 0).
-end (opcional): O índice final (não inclusivo) até o qual preencher (padrão é array.length).
+valor: O valor a ser usado para preencher o array.
+indiceInicial (opcional): O índice inicial a partir do qual começar a preencher (padrão é 0).
+indiceFinal (opcional): O índice final (não inclusivo) até o qual preencher (padrão é array.length).
 */
 
 //Exemplo 1: Preenchendo um array com um valor

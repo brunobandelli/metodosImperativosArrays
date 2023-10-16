@@ -96,7 +96,7 @@ console.log(sliceToEnd);  // Output: ['c', 'd']
 
 /*
 DICA:
-Perceba que nesse ocasião, o indice final é negativo,
+Perceba que nessa ocasião, o indice final é negativo,
 isso facilita, pois você não precisa contar até o final com o indice positivo, que no caso seria (4).
 */
 
@@ -115,7 +115,7 @@ console.log(sliceString);  // Output: 'Hello'
 /*------------------------------------------------------------------------------------------------------------------------*/
 console.log("-----------------------------------------------------------------------------------------------------Exemplo 7")
 
-//Exemplo 8: Slice para criar uma cópia de uma parte de um array de objetos
+//Exemplo 8: Em um array de objetos.
 
 const originalArray4 = [
     { id: 1, name: 'Alice' },

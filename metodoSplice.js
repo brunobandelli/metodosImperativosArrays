@@ -2,17 +2,17 @@
 
 /*
 splice()
-Descrição: Modifica um array, adicionando ou removendo elementos.
+Descrição: Modifica um array, adicionando, removendo elementos ou substituindo.
 Tradução: "emendar"
 */
 
 /*
 SINTAXE:
 
-array.splice(inicio, quantidade[, elemento1[, elemento2[, ...]]]);
+array.splice(inicio, quantidadeRemocao, elemento1, elemento2, ...);
 
 inicio: Índice onde a modificação começa.
-quantidade: Número de elementos a serem removidos.
+quantidadeRemocao: Número de elementos a serem removidos.
 elemento1, elemento2, ...: Elementos a serem adicionados ao array.
 */
 
@@ -65,7 +65,7 @@ console.log("-------------------------------------------------------------------
 
 //Exemplo 5: Substituindo um objeto.
 
-const arrayDeObjetos2 = [
+const arrayDeObjetos = [
     { id: 1, nome: 'Alice' },
     { id: 2, nome: 'Bob' },
     { id: 3, nome: 'Cleiton' }
@@ -74,9 +74,9 @@ const arrayDeObjetos2 = [
   const novoObjeto = { id: 4, nome: 'Charlie' };
   
   // Adicionar o novo objeto ao array
-  arrayDeObjetos2.splice(1, 1, novoObjeto);
+  arrayDeObjetos.splice(1, 1, novoObjeto);
   
-  console.log('Array após splice:', arrayDeObjetos2);
+  console.log('Array após splice:', arrayDeObjetos);
   
 
 
@@ -85,7 +85,7 @@ console.log("-------------------------------------------------------------------
 
 //Exemplo 6: Adicionando 2 objetos
 
-const arrayDeObjetos3 = [
+const arrayDeObjetos2 = [
     { id: 1, nome: 'Alice' },
     { id: 2, nome: 'Bob' },
     { id: 3, nome: 'Cleiton' }
@@ -94,9 +94,9 @@ const arrayDeObjetos3 = [
   const novoObjeto2 = [{ id: 4, nome: 'Charlie' }, { id: 5, nome: 'Bruno' }];
   
   // Adicionar o novo objeto ao array
-  arrayDeObjetos3.splice(3, 0, ...novoObjeto2);
+  arrayDeObjetos2.splice(3, 0, ...novoObjeto2);
   
-  console.log('Array após splice:', arrayDeObjetos3);
+  console.log('Array após splice:', arrayDeObjetos2);
 
 
 /*------------------------------------------------------------------------------------------------------------------------*/

@@ -10,7 +10,7 @@ Tradução: "contém"
 /*
 SINTAXE:
 
-array.includes(elemento[, índiceInicial])
+array.includes(elemento, índiceInicial)
 
 elemento: O elemento que você deseja verificar se está presente no array.
 índiceInicial (opcional): Um índice a partir do qual a pesquisa deve começar. 
